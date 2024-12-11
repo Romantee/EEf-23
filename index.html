@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="lt"> 
+<head>
+    <link rel="stylesheet" href="style.css">
+    <script src="myscripts.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+        rel="stylesheet" 
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" 
+        crossorigin="anonymous">
+    <meta charset="UTF-8"> 
+    <meta name="description" content="Papildoma užduotis">
+    <meta name="author" content="--Romantė Šiupšinskaitė"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+
+    <title>Laboratorinis darbas</title> 
+    
+</head>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-name">
+            <h2>My Resume</h2>
+        </div>
+        <div id="txt"></div>
+        <!-- Desktop Navigation -->
+        <div class="menu-buttons d-none d-md-flex">
+            <button class="btn" id="btn" onclick="myFunction()"> ◐ </button>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#resume">Resume</a>
+            <a href="#portfolio">Portfolio</a>
+            <a href="#contact">Contact</a>
+        </div>
+
+        <!-- Mobile Dropdown -->
+        <div class="dropdown d-md-none">
+            <button class="btn" id="" onclick="myFunction()">◐</button>
+            <button onclick="toggleDropdown()">☰</button>
+            <ul class="dropdown-menu" id="dropdownMenu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#resume">Resume</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+    <body onload="startTime()" >
+
+    <div class="home" id="home">
+        <div id="jumbotron">
+            <img src="nuotraukos/jumbotronas.jpg" id="jumbotron-image" alt="Jumbotron Background">
+            <div class="image-text">Hello!</div>
+        </div>
+    </div>
+     
+    <div class="container container-fluid" id="about">
+        <div class="About" id="about">
+            <div class="row">
+            <h2><br>About</h2>
+                <hr id="margin">
+                <p><br></p>
+                <div class="col-sm-3">
+                    <img src="nuotraukos/jolie.jpg" width="250">
+                </div>
+                <div class="col-sm-4">
+                    <h3>Electrical Power engineer</h3>
+                    <br>
+                    <p><b><span style="color: #E91E63;">&gt;</span> Name: </b>Romantė</p>
+                    <p><b><span style="color: #E91E63;">&gt;</span> Age: </b>25</p>
+                    <P><b><span style="color: #E91E63;">&gt;</span> Email: </b>potato@gmail.com</P>
+                    <p><b><span style="color: #E91E63;">&gt;</span> Phone: </b>+370123456</p>
+                </div>
+                <div class="col-sm-4">
+                    <br><br><br>
+                    <p><b><span style="color: #E91E63;">&gt;</span> City: </b>Lankupka metropolis</p>
+                    <p><b><span style="color: #E91E63;">&gt;</span> Birthday: </b>1999-09-09</p>
+                    <p><b><span style="color: #E91E63;">&gt;</span> Website: </b>www.website.com</p>
+                    <p><b><span style="color: #E91E63;">&gt;</span> Degree: </b>Bachelor's</p>
+                </div>
+                <p>
+                    <br><br>
+                    Passionate about renewable energy, power distribution, and sustainable solutions, 
+                    I aim to contribute to innovative energy projects that shape a greener future. 
+                    With a solid educational background and hands-on experience, I excel in solving complex problems, ensuring system reliability, 
+                    and adhering to industry standards. My goal is to leverage my expertise in electrical energy systems to drive efficiency and 
+                    sustainability in the energy sector.
+                    <br>
+               </p>
+            </div>
+        </div>
+    </div>
+    <div class="container container-fluid">
+        <div class="row">
+        <h2><br>Skills</h2>
+            <hr id="margin">
+            <p><br></p>
+            <div class="col-sm-6">
+                <div class="skills">
+                    <div class="skill">
+                        <span class="skill-name">HTML &nbsp;&nbsp;&nbsp;</span>
+                        <span class="skill-percent">100%</span>
+                        <div class="skill-bar">
+                            <div class="progress" style="width: 100%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span class="skill-name">CSS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                        <span class="skill-percent">90%</span>
+                        <div class="skill-bar">
+                            <div class="progress" style="width: 90%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span class="skill-name">Matlab</span>
+                        <span class="skill-percent">80%</span>
+                        <div class="skill-bar">
+                            <div class="progress" style="width: 80%;"></div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="skill">
+                    <span class="skill-name">AutoCad</span>
+                    <span class="skill-percent">90%</span>
+                    <div class="skill-bar">
+                        <div class="progress" style="width: 90%;"></div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <span class="skill-name">KiCad &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                    <span class="skill-percent">75%</span>
+                    <div class="skill-bar">
+                        <div class="progress" style="width: 75%;"></div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <span class="skill-name">Python &nbsp;&nbsp;</span>
+                    <span class="skill-percent">60%</span>
+                    <div class="skill-bar">
+                        <div class="progress" style="width: 60%;"></div>
+                    </div>
+                    <p><br><br></p>
+                </div>
+            </div>  
+        </div>
+    </div>
+
+    <section id="resume" class="resume">
+        <div class="container section title" data-aos="fade-up">
+            <h2><br>Resume</h2>
+            <hr id="margin">
+            <p>Whether designing innovative technologies, optimizing processes, or creating sustainable infrastructure, engineers play a critical role in shaping the future. </p>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+                    <h4><b>Sumary</b></h4>
+                    <div class="resume-item pb-0">
+                        <h4>Romantė</h4>
+                        <p><em>Innovative Engineer with 3+ years of experience designing and developing electrical transfer systems.</em></p>
+                        <ul>
+                          <li>Lankupkos didmiestis</li>
+                          <li>+37061234567</li>
+                          <li>email@gmail.com</li>
+                        </ul>
+                    </div>
+                        <h4><b><br>Education</b></h4>
+                        <div class="resume-item">
+                            <h4>vilnius tech</h4>
+                            <h5>2019-2023</h5>
+                            <ul>
+                              <li>Electrical Power Engineering</li>
+                              <li>Bachelor's degree</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+                        <h3><b>Professional Experience</b></h3>
+                        <div class="resume-item">
+                          <h4>Senior  engineer</h4>
+                          <h5>2024 - Present</h5>
+                          <p><em>EPSO-G, Vilnius</em></p>
+                          <ul>
+                            <li>Designed and developed innovative systems to improve efficiency and solve complex technical problems across various industries.</li>
+                            <li>Collaborated with teams and stakeholders to create detailed project plans, blueprints, and technical documentation for implementation. </li>
+                        </div>
+            
+                        <div class="resume-item">
+                          <h4>Control systems engineer</h4>
+                          <h5>2022-2024</h5>
+                          <p><em>"AB Ignitis group", Vilnius</em></p>
+                          <ul>
+                            <li>Conducted tests and analyses on prototypes and existing systems.</li>
+                            <li>Maintained and repaired machinery and infrastructure.</li>
+                          </ul>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="container container-fluid">
+        <div class="Portfolio" id="portfolio">
+            <div class="row">
+            <h2><br>Portfolio</h2>
+            <hr id="margin">
+                <div class="col-sm-5">
+                    <h3><br>Math formula:</h3>
+                        <math display="block">
+                            <mrow>
+                                <mi>f</mi>
+                                <mstyle mathsize="100%"> <mi>(</mi> </mstyle>
+                                <mi>a</mi>
+                                <mstyle mathsize="100%"> <mi>)</mi> </mstyle>
+                                <mo>=</mo>
+                                <mfrac>
+                                    <mn>1</mn>
+                                    <mrow>
+                                        <mn>2</mn>
+                                        <mi>&pi;</mi>
+                                        <mi>i</mi>
+                                    </mrow>
+                                </mfrac>
+                                <mo>&#x222E;</mo>
+                                <mfrac>
+                                    <mrow>
+                                        <mi>f</mi>
+                                        <mo>(</mo>
+                                        <mi>z</mi>
+                                        <mo>)</mo>
+                                    </mrow>
+                                    <mrow>
+                                        <mi>z</mi>
+                                        <mo>&#x2212;</mo>
+                                        <mi>a</mi>
+                                    </mrow>
+                                </mfrac>
+                                <mi>d</mi>
+                                <mi>z</mi>
+                            </mrow>
+                        </math>
+                </div>
+            <div class="col-sm-6">
+                <p><br><br><br>Engineering is more than just equations and blueprints; it's about turning ideas into reality. 
+                    From renewable energy systems to cutting-edge robotics, engineers drive innovation across industries. Collaboration, critical thinking, 
+                    and adaptability are key traits that define successful professionals in this ever-evolving field.</p>
+            </div> 
+            <p><br></p>
+
+            <div class="col-sm-4">
+                <img src="nuotraukos/portfolio1.jpg" style="height:500px; width: auto;">
+            </div>
+            <div class="col-sm-4 ">
+                <img src="nuotraukos/portfolio2.jpg" style="height:500px; width: auto;">
+            </div>
+            <div class="col-sm-4 ">
+                <img src="nuotraukos/portfolio3.jpg" style="height:500px; width: auto;">
+            </div>       
+        </div>  
+        </div>
+        <p><br></p>
+    </div>
+
+    <section id="contact" class="contact">
+        <div class="container section title" data-aos="fade-up">
+            <h2><br>Contact</h2>
+            <hr id="margin">
+            <p><br></p>
+        </div>
+        <div class="container" data-aos="fade" data-aos-delay="100">
+            <div class="row gy-4">
+                <div class="col-lg-4">
+                    <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="200">
+                        <i class="bi bi-geo-alt flex-shrink-0"></i>
+                        <div>
+                          <h3>Address</h3>
+                          <p>Plytinės g. 27, Vilnius</p>
+                        </div>
+                      </div>
+                      <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="300">
+                        <i class="bi bi-telephone flex-shrink-0"></i>
+                        <div>
+                          <h3>Call Us</h3>
+                          <p>+37061234567</p>
+                        </div>
+                      </div>
+                      <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
+                        <i class="bi bi-envelope flex-shrink-0"></i>
+                        <div>
+                          <h3>Email Us</h3>
+                          <p>email@gmail.com</p>
+                        </div>
+                      </div>
+                      <div>
+                        <h5 style="margin-top: 100px; text-align: center; line-height: 2; max-width: 300px;">
+                            We kindly invite you to insert your personal details and participate in this completely random questionnaire, 
+                            where you'll be rating your answers on a scale from 1 to 10.
+                        </h5>
+                    </div>
+                </div>
+                <div class="col-lg-8">
+                    <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
+                        <label>Personal details:</label>
+                      <div class="row gy-4">
+        
+                        <div class="col-md-6">
+                          <input type="text" name="name" class="form-control" placeholder="Your Name" required="">
+                        </div>
+        
+                        <div class="col-md-6 ">
+                          <input type="email" class="form-control" name="email" placeholder="Your Email" required="">
+                        </div>
+                        
+                        <div class="col-md-6">
+                            <input type="text" class="form-control" name="telephone"  placeholder="Telephone" required="">
+                          </div>
+
+                        <div class="col-md-6">
+                          <input type="text" class="form-control" name="country"  placeholder="Country" required="">
+                        </div>
+                        
+                        <div class="col-md-12">
+                            <input type="text" class="form-control" name="adress" placeholder="Adress" required="">
+                          </div>
+
+                          <div class="col-md-6">
+                            <label for="websiteRating">How beautiful is this website?</label>
+                            <input type="range" id="websiteRating" name="websiteRating" min="1" max="10" required>
+                            <span id="websiteValue" class="value-display">5</span>
+                        
+                            <label for="catsRating" class="me-2">How much do you like cats?</label>
+                            <input type="range" id="catsRating" name="catsRating" min="1" max="10" required>
+                            <span id="catsValue" class="value-display">5</span>
+                        
+                            <label for="dogsRating" class="me-2">How much do you like dogs?</label>
+                            <input type="range" id="dogsRating" name="dogsRating" min="1" max="10" required>
+                            <span id="dogsValue" class="value-display">5</span>
+                        
+                            <label for="travelRating" class="me-2">How much do you enjoy traveling?</label>
+                            <input type="range" id="travelRating" name="travelRating" min="1" max="10" required>
+                            <span id="travelValue" class="value-display">5</span>
+                        
+                            <label for="codingRating" class="me-2">How much do you enjoy coding/programming?</label>
+                            <input type="range" id="codingRating" name="codingRating" min="1" max="10" required>
+                            <span id="codingValue" class="value-display">5</span>
+                        </div>
+                        
+                        <div class="col-md-12 text-center">
+                            <div class="loading">Loading</div>
+                            <div class="error-message"></div>
+                            <div class="sent-message">Your message has been sent. Thank you!</div>
+                        
+                            <button type="submit">Send Message</button>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+            </div>
+        </div>
+        <p><br></p>
+    </section>
+    
+    <footer id="footer" class="footer light-background">
+        <h3 class="sitename">My Resume</h3>
+        <div class="social-links d-flex justify-content-center">
+            <a href="https://www.facebook.com/vilniustech/" class="fa fa-facebook"></a>
+            <a href="https://www.instagram.com/vilniustech/" class="fa fa-instagram"></a>
+            <a href="https://www.youtube.com/channel/UCW4UCKB80NlgnD7SBJZMAlQ" class="fa fa-youtube"></a>
+            <a href="https://www.linkedin.com/school/vilniustech/" class="fa fa-linkedin"></a>
+        </div>
+        <!--<div class="contacts">
+            <h5>Contacts</h5>
+            <li>Telephone: +3706123456</li>
+            <li>Email: email@gmail.com</li>
+            <li>Website: <a href="https://vilniustech.lt/">Vilnius tech</a></li>
+        </div> -->
+        <div class="credits">
+            Designed by Romantė Šiupšinskaitė EEf-23
+        </div>
+    </footer>
+    <a href="#" id="scroll-top" class="scroll-top">
+        <i class="bi bi-arrow-up-short"></i>
+    </a>
+</body>
+</html>

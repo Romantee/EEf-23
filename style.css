@@ -1,0 +1,524 @@
+#margin {
+    background-color: #E91E63;
+    border-style:none;
+    height: 4px;
+    width: 50px;
+}
+html, body {
+    overflow-x:hidden;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 200;
+}
+/*--------------------*/
+body.dark-mode {
+    background-color: black;
+    color: white;
+}
+
+h1, h2,h3,h4,h5 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-style: italic;
+    font-size: 28px;
+    font-weight: bold;
+    color:rgb(44, 62, 80) ;   
+}
+body.dark-mode h1, 
+body.dark-mode h2, 
+body.dark-mode h3, 
+body.dark-mode h4, 
+body.dark-mode h5 {
+    color: lightblue; /* Lighter color for dark mode */
+}
+/*----------------------------------------------------------------------------*/
+.header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items:right;
+    padding: 10px 20px;
+    background-color: white;
+    position: fixed;
+    z-index: 2;
+}
+
+.header.dark-mode, .menu-buttons.dark-mode, .skills.dark-mode {
+    background-color: black;
+    color: lightblue;
+}
+@media (max-width: 768px) {
+    .header-name h2 { font-size: 18px;}
+    .menu-buttons a {font-size: 14px;}
+    .skill-name, .skill-percent { font-size: 12px;}
+    .about img {
+        width: 100%;
+        height: auto;}
+    .dropdown-menu { text-align: center;}
+}
+@media (min-width: 769px) and (max-width: 992px) {
+    .header-name h2 {font-size: 20px; }
+    .menu-buttons a {font-size: 16px;}
+    .about img {
+        width: 75%;
+        height: auto; }
+}
+
+.header-name h2{
+    color: rgb(44, 62, 80);
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+/*-------------------------------------------------------------------------*/
+.btn {
+    display: inline-block;
+    padding: 10px;
+    border: #E91E63;
+    border-radius: 5px; 
+    text-align: center;
+    text-decoration: none; 
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.btn:hover {
+    background-color: #ec83af; /* Darker blue on hover */
+}
+body.dark-mode .btn{
+    background-color: f2f6f9 ;
+    color: #f2f6f9;
+}
+/*CLOCK---------------------------------------------------------*/
+#txt{
+    font-family:'Times New Roman', Times, serif;
+      font-size: 20px;
+      color: #E91E63;
+      background: #f2f6f9;
+      padding: 10px;
+      border-radius: 10px;
+      animation: pulse 1s infinite;
+      box-shadow: 0 0 10px #ec83af, 0 0 10px #ec83af;
+}
+body.dark-mode #txt{
+    background-color: lightblue;
+    color: black;
+    box-shadow: 0 0 10px darkblue, 0 0 10px #ec83af
+}
+/* -------------------------------------------------------- */
+.menu-buttons a {
+    display: inline-block;
+    font-family:Arial, Helvetica, sans-serif;
+    padding: 8px 16px;
+    font-size: 16px;
+    color: grey;
+    text-decoration: none;
+    transition: 0.3s;
+    text-align: center;
+    cursor: pointer;
+}
+body.dark-mode .menu-buttons a{
+    color: lightblue;
+
+}
+.menu-buttons a:hover {
+    background-color: whitesmoke;
+    color: rgb(207, 30, 118);
+}
+
+/* Hamburger Menu */
+.menu-icon {
+    font-size: 24px;
+    color: rgb(44, 2, 2);
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+}
+.menu-icon::after{
+    content: none;
+}
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    right: 20px;
+    list-style: none;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    color: aliceblue;
+}
+.dropdown-menu li {
+    margin: 5px 0;
+}
+.dropdown-menu li a {
+    color: grey;
+    text-decoration: none;
+    padding: 8px;
+    display: block;
+}
+.dropdown-menu li a:hover {
+    background-color: white;
+    color:rgb(207, 30, 118) ;
+}
+.dropdown-menu {
+    display: none; 
+    position: absolute;
+    background-color: white;
+    width: 100%;
+    z-index: 1000;
+    text-align: center;
+}
+
+.dropdown-menu.show {
+    display: block;
+}
+
+.menu-icon {
+    cursor: pointer;
+    font-size: 24px;
+}
+/*-------------------------------------------------------------------*/
+#jumbotron{
+    position:relative;
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+#jumbotron-image{
+    position:absolute;
+    top: 0;
+    left:0;
+    width: 100%;
+    height:100%;
+    object-fit: cover;
+    z-index: -1;
+}
+.image-text{
+    font-size: 55px;
+    font-weight: bold;
+    color: white;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+/*-------------------------------------------------------------------*/
+.container {
+    width: 100%;
+    margin: auto;
+    font-family: Arial, sans-serif;
+}
+.skill-name {
+    width: 20%;
+    text-align: left;
+    font-size: 14px;
+    font-weight: bold;
+    color: #34495e; 
+    text-transform: uppercase;
+}
+body.dark-mode .skill-name, body.dark-mode .skill-percent{
+    color: lightcyan;
+}
+
+.skill-percent {
+    width: 15%;
+    text-align: right;
+    font-size: 14px;
+    font-weight: bold;
+    color: #34495e; 
+    margin-left: 530px;
+}
+.skill-bar {
+    width: 100%;
+    height: 15px;
+    background-color: #eaeaea; 
+}
+
+.skill-bar .progress {
+    height: 100%;
+    background-color: #E91E63; 
+    border-radius: 0;
+}
+.col-sm-6 {
+    width: 48%;
+}
+/*Resume---------------------------------------------------------------------*/
+.resume{
+    background-color:#f2f6f9;
+  }
+body.dark-mode section{
+    background-color: rgb(32, 32, 35);
+}
+.resume .resume-item {
+    padding: 0 0 20px 20px;
+    margin-top: -2px;
+    border-left: 2px solid #E91E63;
+    position: relative;
+  }
+.resume .resume-item h4 {
+    line-height: 18px;
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: color-mix(in srgb, grey, transparent 20%);
+    margin-bottom: 10px;
+  }
+.resume .resume-item h5 {
+    font-size: 16px;
+    padding: 5px 15px;
+    display: inline-block;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+.resume .resume-item ul {
+    padding-left: 20px;
+  }
+.resume .resume-item ul li {
+    padding-bottom: 10px;
+  }
+.resume .resume-item:last-child {
+    padding-bottom: 0;
+  }
+.resume .resume-item::before {
+    content: "";
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    border-radius: 50px;
+    left: -9px;
+    top: 0;
+    background: whitesmoke;
+    border: 2px solid #E91E63;
+/*-----------------------------------------------------------------------*/
+  }
+math {
+    margin-top: 20px;
+    text-align: center; 
+    background-color: #f2f6f9; 
+    padding: 10px; 
+    border-radius: 5px; 
+    font-size: 1.2em; 
+    display: inline-block;
+    box-shadow: 0px 2px 5px rgba(26, 0, 0, 0.3);
+}
+body.dark-mode math{
+    background-color:#5a656e ; 
+}
+/*--------------------------------------------------------------------*/
+.phone.call:hover{
+    fill:#e91e63
+}
+/*Contact--------------------------------------------------------------------*/
+.contact .info-item+.info-item {
+    margin-top: 40px;
+  }
+  
+  .contact .info-item i {
+    color: #e91e63;
+    background: color-mix(in srgb,#e91e63 , transparent 92%);
+    font-size: 20px;
+    width: 44px;
+    height: 44px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    transition: all 0.3s ease-in-out;
+    margin-right: 15px;
+  }
+  
+  .contact .info-item h3 {
+    padding: 0;
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 5px;
+  }
+  
+  .contact .info-item p {
+    padding: 0;
+    margin-bottom: 0;
+    font-size: 14px;
+  }
+  
+  .contact .info-item:hover i {
+    background: #e91e63;
+    color: #e91e63;
+  }
+  
+  .contact .php-email-form {
+    height: 100%;
+  }
+  
+  .contact .php-email-form input[type=text],
+  .contact .php-email-form input[type=email],
+  .contact .php-email-form textarea {
+    font-size: 14px;
+    padding: 10px 15px;
+    box-shadow: none;
+    border-radius: 0;
+    color: var(--default-color);
+    background-color: color-mix(in srgb, #ffffff, transparent 50%);
+    border-color: color-mix(in srgb, #5a656e, transparent 80%);
+  }
+  
+  .contact .php-email-form input[type=text]:focus,
+  .contact .php-email-form input[type=email]:focus,
+  .contact .php-email-form textarea:focus {
+    border-color: #e91e63;
+  }
+  
+  .contact .php-email-form input[type=text]::placeholder,
+  .contact .php-email-form input[type=email]::placeholder,
+  .contact .php-email-form textarea::placeholder {
+    color: color-mix(in srgb,black , transparent 20%);
+  }
+  
+  .contact .php-email-form button[type=submit] {
+    color: #ffffff;
+    background:#e91e63;
+    border: 0;
+    padding: 10px 30px;
+    transition: 0.4s;
+    border-radius: 50px;
+  }
+  
+  .contact .php-email-form button[type=submit]:hover {
+    background: color-mix(in srgb, #e91e63, transparent 25%);
+  }
+
+  /*-----------------------------------------------------------------*/
+  .php-email-form label {
+    font-weight: bold;
+    display: inline-block;
+    margin-top: 20px;
+    color: #555; /* Medium gray text color */
+}
+
+/* Buttons */
+/*php-email-form button {
+    background: #e91e63; /* Blue button 
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    background-color: color-mix(in srgb, #ffffff, transparent 50%);
+    border-color: color-mix(in srgb, #5a656e, transparent 80%)
+}*/
+
+/*.php-email-form button:hover {
+    background: #e91e63;  Darker blue on hover */
+
+
+/* Layout for Rows */
+.php-email-form .row {
+    display: flex;
+    flex-wrap: wrap; /* Ensure responsiveness */
+    gap: 15px; /* Space between items */
+}
+
+/* Columns */
+.php-email-form .col-md-6 {
+    flex: 1 1 calc(50% - 15px); /* Two equal-width columns */
+    min-width: 250px; /* Prevent from shrinking too small */
+}
+
+
+.value-display {
+    display: block;
+    margin-bottom: 1em;
+    font-weight: bold;
+}
+
+input[type="range"] {
+    width: 100%;
+    margin-top: 0.5em;
+    background: #E91E63;
+}
+
+
+     /*Footers ----------------------------------------------------*/
+.footer {
+  color: #5a656e;
+  background-color: #f2f6f9;
+  font-size: 14px;
+  text-align: center;
+  padding: 30px 0;
+  position: relative;
+}
+body.dark-mode footer{
+    background-color: rgb(32, 32, 35);
+}
+.footer h3 {
+  font-size: 36px;
+  font-weight: 700;
+  position: relative;
+  padding: 0;
+  margin: 0 0 15px 0;
+}
+.footer p {
+  font-size: 15;
+  font-style: italic;
+  padding: 0;
+  margin: 0 0 30px 0;
+}
+.footer .social-links {
+  margin: 0 0 30px 0;
+}
+.footer .social-links a {
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #E91E63;
+  color: white;
+  line-height: 1;
+  margin: 0 4px;
+  border-radius: 50%;
+  text-align: center;
+  width: 36px;
+  height: 36px;
+  transition: 0.3s;
+}
+.footer .social-links a:hover {
+  background: color-mix(in srgb, #E91E63, transparent 30%);
+  text-decoration: none;
+}
+/*.footer .contacts {
+    padding-top: 25px;
+    padding-bottom: 0;
+ }*/
+  
+  .footer .credits {
+    font-size: 13px;
+    padding-top: 5px;
+    border-top: 1px solid color-mix(in srgb, black, transparent 80%);
+  }
+/*--------------------------------------------------------------------------------*/
+.scroll-top {
+    position: fixed;
+    visibility: hidden;
+    opacity: 0;
+    right: 15px;
+    bottom: 15px;
+    z-index: 9999;
+    background-color: #e91e63;
+    width: 40px;
+    height: 40px;
+    border-radius: 4px;
+    transition: all 0.4s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.scroll-top.active {
+    visibility: visible;
+    opacity: 1;
+}
+.scroll-top i {
+    font-size: 24px;
+    color: white;
+}
+.scroll-top:hover {
+    background: color-mix(in srgb, #E91E63, transparent 50%);
+    text-decoration: none;
+    color: white;
+}
